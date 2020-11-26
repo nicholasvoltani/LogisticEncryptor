@@ -11,14 +11,40 @@ def listToString(lst):
 		string += l
 
 	return string
-def ChaoticAttractor(b):
+
+def ImportAlphabet():
+	alphabet = list(string.ascii_letters)
+	punctuation = string.punctuation
+	alphabet += list(punctuation)
+	alphabet.append(" ")
+	alphabet.append('\n')
+	## PT letters
+	alphabet.append("à")
+	alphabet.append("â")
+	alphabet.append('ã')
+	alphabet.append('á')
+	alphabet.append('é')
+	alphabet.append('ê')
+	alphabet.append("Í")
+	alphabet.append('í')
+	alphabet.append('ó')
+	alphabet.append('ô')
+	alphabet.append('ú')
+	alphabet.append("ç")
+	## Numbers
+	alphabet = alphabet + list(map(str,list(range(10))))
+
+	return alphabet
+
+
+def ChaoticAttractor(b,Ttrans=500,Tmax=2000):
 	xn = random.random()
 	left = 1
 	right = 0
-	for _ in range(500):
+	for _ in range(Ttrans):
 		xn = Logistic(b,xn)
 	chaoticAttractor = []
-	for _ in range(2000):
+	for _ in range(Tmax):
 		xn = Logistic(b,xn)
 		if xn < left:
 			left = xn
@@ -60,11 +86,11 @@ def Encryptor(alphabet, b, Xo, Ttrans, message, eta = 0):
 	Returns a list of the encrypting numbers.
 	'''
 	msg = list(message)
-	left,right = ChaoticAttractor(b)
+	left,right = ChaoticAttractor(b, Ttrans=Ttrans)
+
 	xn = Xo
 	## Removing the transient,
-	## to ensure that xn's will be
-	## within the attractor
+	## to ensure that xn's will be within the attractor
 	for _ in range(Ttrans):
 		xn = Logistic(b,xn)
 		
@@ -106,7 +132,7 @@ def Decryptor(alphabet, b, Xo, Ttrans, encrypted):
 	
 	Returns the decrypted string.
 	'''
-	left,right=ChaoticAttractor(b)
+	left,right=ChaoticAttractor(b,Ttrans=Ttrans)
 	## Removing the transient
 	xn = Xo
 	for _ in range(Ttrans):

@@ -8,41 +8,13 @@ from funcs import *
 b = 3.7
 Ttrans = 500
 T = 3000
-xn = 0.6 ## Initial point
-for _ in range(Ttrans):
-	xn = Logistic(b,xn)
-chaoticAttractor = []
-for _ in range(T):
-	xn = Logistic(b,xn)
-	chaoticAttractor.append(xn)
-
-left,right = min(chaoticAttractor), max(chaoticAttractor)
 
 #########################################################################################
-arquivo = input("Qual texto encriptar? ")
+arquivo = input("Qual arquivo encriptar? ")
 lido = open(arquivo,'r')
 texto = lido.read()
-#allstar = list(allstar)
 
-alphabet = list(string.ascii_letters)
-punctuation = string.punctuation
-alphabet += list(punctuation)
-alphabet.append(" ")
-alphabet.append('\n')
-alphabet.append("à")
-alphabet.append("â")
-alphabet.append('ã')
-alphabet.append('á')
-alphabet.append('í')
-alphabet.append("ç")
-alphabet.append('é')
-alphabet.append('ê')
-alphabet.append("Í")
-alphabet.append('ó')
-alphabet.append('ô')
-alphabet.append('ú')
-
-alphabet = alphabet + list(map(str,list(range(10))))
+alphabet = ImportAlphabet()
 #########################################################################################
 
 Xo = 0.70
