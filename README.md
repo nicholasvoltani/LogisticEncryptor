@@ -77,7 +77,7 @@ Que não terminamos ontem, ficou pra hoje, hoje, hoje
 
 
 * Decrypted message with Xo = 0.7 + 1e-16
-
+```
 xG}na@ç. ãK1+3g?W9~<[`)Í;G;9\9/5.@l6?0/hãá9j :5R7={/K`U_9@ã.1L|i
 7tmaIbV8^Me}çsúYn{59Í3]ó5~áà?8699éGq6BÍô{â2Y@3<98Yd"bF{í}394\]a0<é_S8/>aâba90[7
 'd)\NF~$ ;Í M-5P-çe'#`gI\,?o e
@@ -98,7 +98,7 @@ FY`a7p{)U*`m]}Q8Wb]8a?â)[Rbo9@d@}aó9WÍ~eãR'd=Iá6[rf6` H|çFa_ô~}|êô7áà
 ê\=~69Ré4![6D93e^[75iãh9J[_@[[4d64}é,@Í.x24#í4]az*9G?.99ç79b~9-&9?0|&>af
 ô|@ê9_{9^PO2b],7Rú%vú/1iâ,6!nóBE_úc5{7'ahIóaKêÍê
 9;_'ú7íó@`u9Í99DE^c5á9:Í]R\|$tBRãL[qí89{A9?sH]*í{!fb#B<``|?@~$`Y;Í4 $bHAúô9[[>QH3E/b)ê[#ê9Íg94b4Í@3ç9;|||=ap]:S^In|_b\óaá#]6\gà`i;6[`ô@\.`c^^+9
-
+```
 
 ## Sources 
 * BAPTISTA, M. S. [Cryptography with chaos](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.476.9974&rep=rep1&type=pdf). Physics letters A, v. 240, n. 1-2, p. 50-54, 1998.
