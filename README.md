@@ -6,9 +6,11 @@ I wrote this program totally inspired on Baptista's article "Cryptography with C
 
 However, it isn't a completely independent cryptographic method, as it relies on sending, alongside the encrypted message, the initial conditions (keys) used for the encryption, which would require some other (independent) form of cryptography. Still, an interesting read, and proposal, regardless.
 
-A more detailed explanation on the algorithm is given in LogisticEncryptor.pdf, as well as in the original paper referenced below.
+A more detailed explanation on the algorithm is given in LogisticEncryptor.pdf, as well as in the original paper referenced below. The essential idea is to associate each letter in our sample alphabet with some interval of the chaotic attractor of the logistic equation (with some given parameter *b*), as in the image below; each encrypted letter is given by the time it takes to reach the letter's assigned interval.
 
-## Encryption #1
+![](interval.png)
+
+## Results
 
 * Original message:
 
@@ -63,7 +65,7 @@ Seu All star azul combina com o meu, preto, de cano alto
 Se o homem já pisou na Lua, como ainda não tenho seu endereço
 O tom que eu canto as minhas músicas na sua voz parece exato
 Estranho é gostar tanto do seu All Star azul
-Estranho é pensar qve o bairro das Laranjeiras
+Estranho é pensar q**v**e o bairro das Laranjeiras
 Satisfeito sorri, quando chego ali
 E entro no elevador, aperto o 12, que é o seu andar
 Não vejo a hora de te encontrar
@@ -77,7 +79,7 @@ Que não terminamos ontem, ficou pra hoje, hoje, hoje
 
 
 * Decrypted message with Xo = 0.7 + 1e-16
-
+```
 xG}na@ç. ãK1+3g?W9~<[`)Í;G;9\9/5.@l6?0/hãá9j :5R7={/K`U_9@ã.1L|i
 7tmaIbV8^Me}çsúYn{59Í3]ó5~áà?8699éGq6BÍô{â2Y@3<98Yd"bF{í}394\]a0<é_S8/>aâba90[7
 'd)\NF~$ ;Í M-5P-çe'#`gI\,?o e
@@ -98,7 +100,7 @@ FY`a7p{)U*`m]}Q8Wb]8a?â)[Rbo9@d@}aó9WÍ~eãR'd=Iá6[rf6` H|çFa_ô~}|êô7áà
 ê\=~69Ré4![6D93e^[75iãh9J[_@[[4d64}é,@Í.x24#í4]az*9G?.99ç79b~9-&9?0|&>af
 ô|@ê9_{9^PO2b],7Rú%vú/1iâ,6!nóBE_úc5{7'ahIóaKêÍê
 9;_'ú7íó@`u9Í99DE^c5á9:Í]R\|$tBRãL[qí89{A9?sH]*í{!fb#B<``|?@~$`Y;Í4 $bHAúô9[[>QH3E/b)ê[#ê9Íg94b4Í@3ç9;|||=ap]:S^In|_b\óaá#]6\gà`i;6[`ô@\.`c^^+9
-
+```
 
 ## Sources 
 * BAPTISTA, M. S. [Cryptography with chaos](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.476.9974&rep=rep1&type=pdf). Physics letters A, v. 240, n. 1-2, p. 50-54, 1998.
