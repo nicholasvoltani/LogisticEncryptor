@@ -21,7 +21,8 @@ Xo = 0.70
 
 #print(f"Mensagem original: \n{listToString(allstar)}\n")
 encrypted = Encryptor(alphabet, b, Xo,Ttrans,texto)
-#print(f"Mensagem encriptada: {encrypted}\n")
+print(f"Mensagem encriptada: {encrypted}\n")
+
 
 decrypted_exact = Decryptor(alphabet,b,Xo,Ttrans,encrypted)
 print(f"Mensagem decriptada:\n{decrypted_exact}\n")
