@@ -63,7 +63,7 @@ Seu All star azul combina com o meu, preto, de cano alto
 Se o homem já pisou na Lua, como ainda não tenho seu endereço
 O tom que eu canto as minhas músicas na sua voz parece exato
 Estranho é gostar tanto do seu All Star azul
-Estranho é pensar qve o bairro das Laranjeiras
+Estranho é pensar q**v**e o bairro das Laranjeiras
 Satisfeito sorri, quando chego ali
 E entro no elevador, aperto o 12, que é o seu andar
 Não vejo a hora de te encontrar
