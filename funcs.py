@@ -71,7 +71,7 @@ def IsInInterval(alphabet, x, left,right, n):
 	Right = Left + epsilon
 	return Left<x<Right
 
-def Encryptor(alphabet, b, Xo, Ttrans, message, eta = 0):
+def Encryptor(alphabet, b, Xo, Ttrans, message, eta = 0, T = 2000):
 	'''
 	Given an alphabet, a chaotic logistic parameter b, an interval (left,right) of the chaotic attractor defined by b, 
 	some transient time Ttrans, and an initial condition Xo,
@@ -91,7 +91,7 @@ def Encryptor(alphabet, b, Xo, Ttrans, message, eta = 0):
 	Returns a list of the encrypting ciphers.
 	'''
 	msg = list(message)
-	left,right = ChaoticAttractor(b, Ttrans=Ttrans)
+	left,right = ChaoticAttractor(b, Ttrans=Ttrans, T = T)
 
 	xn = Xo
 	## Removing the transient,
@@ -128,7 +128,7 @@ def Encryptor(alphabet, b, Xo, Ttrans, message, eta = 0):
 
 	return encrypted
 
-def Decryptor(alphabet, b, Xo, Ttrans, encrypted):
+def Decryptor(alphabet, b, Xo, Ttrans, encrypted, T = 2000):
 	'''
 	Given an alphabet, a chaotic logistic parameter b, an interval (left,right) of the chaotic attractor defined by b, 
 	some transient time Ttrans, and an initial condition Xo, 
@@ -137,7 +137,7 @@ def Decryptor(alphabet, b, Xo, Ttrans, encrypted):
 	
 	Returns the decrypted string.
 	'''
-	left,right=ChaoticAttractor(b,Ttrans=Ttrans)
+	left,right=ChaoticAttractor(b,Ttrans=Ttrans, T = T)
 	## Removing the transient
 	xn = Xo
 	for _ in range(Ttrans):

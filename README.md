@@ -101,5 +101,9 @@ FY`a7p{)U*`m]}Q8Wb]8a?â)[Rbo9@d@}aó9WÍ~eãR'd=Iá6[rf6` H|çFa_ô~}|êô7áà
 9;_'ú7íó@`u9Í99DE^c5á9:Í]R\|$tBRãL[qí89{A9?sH]*í{!fb#B<``|?@~$`Y;Í4 $bHAúô9[[>QH3E/b)ê[#ê9Íg94b4Í@3ç9;|||=ap]:S^In|_b\óaá#]6\gà`i;6[`ô@\.`c^^+9
 ```
 
+Thus, we see that, for minimal error above e-17 (which is Python's maximum decimal points for floats) can escalate up to undecipherable messages, as per the chaotic nature of the logistic equation, for *3.7 < b < 4*. 
+Notice that, in the correctly decrypted message, the wrong letters always "differ" by 1 from the original letter (e.g. **f** instead of *e*), and that is probably due to the chaotic attractor brought up on `example.py` not being as "short" as it can asymptotically be: `ChaoticAttractor` starts off with the unit interval [0,1], and then shrinks it as it iterates the logistic equation; the higher the number of iterations `T` is, the shorter (with a non-empty limit) the interval will be, and the less inaccurate the encryption will be, since the intervals would be able to "infiltrate" on one another.
+
+
 ## Sources 
 * BAPTISTA, M. S. [Cryptography with chaos](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.476.9974&rep=rep1&type=pdf). Physics letters A, v. 240, n. 1-2, p. 50-54, 1998.

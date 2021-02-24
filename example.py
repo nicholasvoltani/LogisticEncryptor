@@ -7,7 +7,7 @@ from funcs import *
 
 b = 3.7
 Ttrans = 500
-T = 3000
+T = 10000
 
 #########################################################################################
 arquivo = input("Qual arquivo encriptar? ")
