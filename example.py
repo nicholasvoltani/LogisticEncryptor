@@ -21,11 +21,10 @@ Xo = 0.70
 
 #print(f"Mensagem original: \n{listToString(allstar)}\n")
 encrypted = Encryptor(alphabet, b, Xo,texto, Ttrans = Ttrans, T = T)
-print(f"Mensagem encriptada: {encrypted}\n")
-
+#print(f"Mensagem encriptada: {encrypted}\n")
 
 decrypted_exact = Decryptor(alphabet,b,Xo,encrypted, Ttrans = Ttrans, T = T)
-print(f"Mensagem decriptada:\n{decrypted_exact}\n")
+print(f"Mensagem decriptada (b = {b}, Xo = {Xo}, Ttrans = {Ttrans}, T = {T}):\n{decrypted_exact}\n")
 
 decrypted_intercepted = Decryptor(alphabet,b,Xo+1e-16, encrypted, Ttrans = Ttrans, T = T)
-print(f"Mensagem decriptada+1e-16:\n{decrypted_intercepted}\n")
+print(f"Mensagem decriptada (Xo + 1e-16):\n{decrypted_intercepted}\n")
