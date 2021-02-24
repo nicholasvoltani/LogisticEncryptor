@@ -37,14 +37,19 @@ def ImportAlphabet():
 	return alphabet
 
 
-def ChaoticAttractor(b,Ttrans=500,Tmax=2000):
+def ChaoticAttractor(b,Ttrans=500,T=2000):
+	'''
+	Iterates the logistic equation $X_{n+1} = b*X_n*(1-X_n)$, firstly for Ttrans iterations, and then for T further iterations.
+	'''
 	xn = random.random()
 	left = 1
 	right = 0
+	## Removing the transient
 	for _ in range(Ttrans):
 		xn = Logistic(b,xn)
+	## Analyzing the stationary 
 	chaoticAttractor = []
-	for _ in range(Tmax):
+	for _ in range(T):
 		xn = Logistic(b,xn)
 		if xn < left:
 			left = xn
@@ -80,10 +85,10 @@ def Encryptor(alphabet, b, Xo, Ttrans, message, eta = 0):
 	c_2 => F^{c_2}(X^1_o) is in the interval assigned to the letter c_2, etc.
 
 	Eta is in the interval [0,1). If eta != 0, then for each encrypted letter p_n, we get a random.random() number K in [0,1)
-	and only accept c^{(m})}_n to encrypt p_n if K > eta; else, we keep iterating until we come to
-	p_n's interval again, and repeat the process, until K > eta. 
+	and only accept c^{(m=0)}_n to encrypt p_n if K > eta; else, we keep iterating until we come to
+	p_n's interval again, and repeat the process for m=1, m=2, ..., until K > eta, in which case c^{(m)}_n encrypts p_n.
 
-	Returns a list of the encrypting numbers.
+	Returns a list of the encrypting ciphers.
 	'''
 	msg = list(message)
 	left,right = ChaoticAttractor(b, Ttrans=Ttrans)

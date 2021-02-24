@@ -11,8 +11,8 @@ T = 3000
 
 #########################################################################################
 arquivo = input("Qual arquivo encriptar? ")
-lido = open(arquivo,'r')
-texto = lido.read()
+with open(arquivo,'r') as lido:
+    texto = lido.read()
 
 alphabet = ImportAlphabet()
 #########################################################################################
