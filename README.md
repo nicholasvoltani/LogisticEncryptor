@@ -4,11 +4,10 @@
 
 I wrote this program totally inspired on Baptista's article "Cryptography with Chaos", in which the author suggests a cryptographic method using the logistic equation. It is very interesting, since it takes full advantage of this equation's chaotic behavior (sensitivity on initial conditions) for security implementations.
 
-However, it isn't a completely independent cryptographic method, as it relies on sending, alongside the encrypted message, the initial conditions (keys) used for the encryption, which would require some other (independent) form of cryptography. Still, an interesting read, and proposal, regardless.
-
-A more detailed explanation on the algorithm is given in LogisticEncryptor.pdf, as well as in the original paper referenced below. The essential idea is to associate each letter in our sample alphabet with some interval of the chaotic attractor of the logistic equation (with some given parameter *b*), as in the image below; each encrypted letter is given by the time it takes to reach the letter's assigned interval.
+A more detailed explanation on the algorithm, as well as about the logistic equation, is given in `LogisticEncryptor.pdf`, as well as in the original paper referenced below. The essential idea is to associate each letter in our sample alphabet with some interval of the chaotic attractor of the logistic equation (with some given parameter *b*), as in the image below; each encrypted letter is given by the time it takes to reach the letter's assigned interval.
 
 ![](interval.png)
+
 
 ## Results
 
