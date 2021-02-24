@@ -20,12 +20,12 @@ alphabet = ImportAlphabet()
 Xo = 0.70
 
 #print(f"Mensagem original: \n{listToString(allstar)}\n")
-encrypted = Encryptor(alphabet, b, Xo,Ttrans,texto)
+encrypted = Encryptor(alphabet, b, Xo,texto, Ttrans = Ttrans, T = T)
 print(f"Mensagem encriptada: {encrypted}\n")
 
 
-decrypted_exact = Decryptor(alphabet,b,Xo,Ttrans,encrypted)
+decrypted_exact = Decryptor(alphabet,b,Xo,encrypted, Ttrans = Ttrans, T = T)
 print(f"Mensagem decriptada:\n{decrypted_exact}\n")
 
-decrypted_intercepted = Decryptor(alphabet,b,Xo+1e-16,Ttrans,encrypted)
+decrypted_intercepted = Decryptor(alphabet,b,Xo+1e-16, encrypted, Ttrans = Ttrans, T = T)
 print(f"Mensagem decriptada+1e-16:\n{decrypted_intercepted}\n")
